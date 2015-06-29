@@ -4,6 +4,12 @@
 	<script src="./lib/movingObject.js"></script>
 	<script src="./lib/asteroid.js"></script>
 	<script src="./lib/game.js"></script>
-	<canvas id="canvas" height="700" width="700"></canvas>
+	<script src="./lib/gameView.js"></script>
+	<canvas id="canvas" height="1000" width="1000"></canvas>
+	<script type "text/javascript">
+		var ctx = document.getElementById('canvas').getContext('2d');
+		var gameView = new Asteroids.GameView(1000, 1000, 50);
+		gameView.start(ctx);
+	</script>
 </body>
 </html>
