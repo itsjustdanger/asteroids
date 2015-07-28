@@ -1,5 +1,6 @@
 <html>
 <body>
+	<link href='http://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
 	<script src="./lib/utils.js"></script>
 	<script src="./lib/movingObject.js"></script>
 	<script src="./lib/asteroid.js"></script>
@@ -8,6 +9,8 @@
 	<script src="./lib/game.js"></script>
 	<script src="./lib/gameView.js"></script>
 	<script src="./keymaster-master/keymaster.js"></script>
+
+	<h1 class="title">Asteroids</h1>
 	<canvas id="canvas" height="460" width="640"></canvas>
 	<script type "text/javascript">
 		var ctx = document.getElementById('canvas').getContext('2d');
@@ -16,3 +19,60 @@
 	</script>
 </body>
 </html>
+
+<style>
+	html, body, p, header, input, div, button, h1, h2, h3, h4, nav, ul, li, textarea, a {
+	  margin: 0;
+	  padding: 0;
+	  border: 0;
+	  outline: 0;
+	  font: inherit;
+	  text-decoration: inherit;
+	  color: inherit;
+	  background: transparent;
+	}
+	section {
+
+	  transition: transform 0.5s;
+	}
+	  div {
+	    z-index: 1;
+	  }
+
+	body {
+	  font-family: 'Press Start 2P', cursive;
+	  background: #000;
+	  color: #fff;
+	}
+
+	ul {
+	  list-style: none;
+	}
+
+	img {
+	  display: block;
+	  width: 100%;
+	  height: auto;
+	}
+
+
+	.group:after {
+	  content: "";
+	  display: block;
+	  clear: both;
+	}
+
+	#canvas {
+		border: 2px solid #eee;
+		border-radius: 10%;
+
+		display: block;
+		margin: 60px auto;
+		text-align: center;
+	}
+
+	.title {
+		font-size: 48px;
+		text-align: center;
+	}
+</style>
