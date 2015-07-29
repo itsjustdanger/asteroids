@@ -1,8 +1,6 @@
 #Asteroids
 
-[Live][live]
-
-[live]:http/itsjustdanger.github.io/asteroids
+[Live](http://itsjustdanger.github.io/asteroids)
 
 An interpretation of the classic arcade game.
 
