@@ -13,6 +13,10 @@
 
 	<div class="content">
 		<h1 class="title">Asteroids</h1>
+		<section class="menu">
+			<h2 class="game-over">GAME OVER</h2>
+			<h3 class="replay">Press R to Play Again.</h3>
+		</section>
 			<section class="score"></section>
 			<section class="level"></section>
 		<canvas id="canvas" height="460" width="640">
@@ -97,5 +101,25 @@
 		top: 18%;
 		left: 585px;
 		z-index: 1;
+	}
+
+	.game-over {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 40%;
+		font-size: 32px;
+	}
+
+	.replay {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 50%;
+		font-size: 18px;
+	}
+
+	.hidden {
+		display: none;
 	}
 </style>
