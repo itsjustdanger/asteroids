@@ -18,6 +18,7 @@ section {
   }
 
 body {
+  position: relative;
   font-family: 'Press Start 2P', cursive;
   background: #000;
   color: #fff;

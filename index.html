@@ -9,14 +9,20 @@
 	<script src="./lib/game.js"></script>
 	<script src="./lib/gameView.js"></script>
 	<script src="./keymaster-master/keymaster.js"></script>
+	<script src="./jquery-1.11.3.js"></script>
 
-	<h1 class="title">Asteroids</h1>
-	<canvas id="canvas" height="460" width="640"></canvas>
-	<script type "text/javascript">
-		var ctx = document.getElementById('canvas').getContext('2d');
-		var gameView = new Asteroids.GameView(640, 460, 2);
-		gameView.start(ctx);
-	</script>
+	<div class="content">
+		<h1 class="title">Asteroids</h1>
+			<section class="score"></section>
+			<section class="level"></section>
+		<canvas id="canvas" height="460" width="640">
+		</canvas>
+		<script type "text/javascript">
+			var ctx = document.getElementById('canvas').getContext('2d');
+			var gameView = new Asteroids.GameView(640, 460, 2);
+			gameView.start(ctx);
+		</script>
+	</div>
 </body>
 </html>
 
@@ -74,5 +80,22 @@
 	.title {
 		font-size: 48px;
 		text-align: center;
+	}
+
+	section.score {
+		position: absolute;
+		top: 18%;
+		left: 20%;
+		z-index: 1;
+	}
+
+	canvas {
+	}
+
+	section.level {
+		position: absolute;
+		top: 18%;
+		left: 585px;
+		z-index: 1;
 	}
 </style>
