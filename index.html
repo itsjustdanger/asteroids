@@ -14,11 +14,15 @@
 	<div class="content">
 		<h1 class="title">Asteroids</h1>
 		<section class="menu">
+			<h2 class="game-over hidden">Game Over<h2>
 			<h2 class="paused">Paused</h2>
 			<h3 class="replay">Press R to Play</h3>
 		</section>
+		<section class="stats">
 			<section class="score"></section>
 			<section class="level"></section>
+			<section class="lives"></section>
+		</section>
 		<canvas id="canvas" height="460" width="640">
 		</canvas>
 		<section class="hints">
@@ -78,7 +82,6 @@
 	.content {
 		position: relative;
 		overflow-x: hidden;
-		width: 900px;
 	}
 
 	#canvas {
@@ -97,20 +100,16 @@
 	}
 
 	section.score {
-		position: absolute;
-		top: 85px;
-		left: 20%;
+		margin-left: 10%;
 		z-index: 1;
 	}
 
 	section.level {
-		position: absolute;
-		top: 85px;
-		left: 585px;
+
 		z-index: 1;
 	}
 
-	.paused {
+	.paused, .game-over {
 		position: absolute;
 		left: 50%;
 		transform: translateX(-50%);
@@ -135,12 +134,25 @@
 		box-shadow: inset 0 0 4em #0d220e;
 
 		margin: 0 auto;
-		width: 600;
+		width: 600px;
 		height: 100px;
 		border: 2px solid #fff;
 		border-radius: 40px;
 		padding: 20px;
-		background:
 	}
 
+	.stats {
+		position: absolute;
+		top: 12%;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+		width: 600px;
+		color: #fff;
+	}
+
+	.stats > section {
+		float: left;
+		margin: 5px 25px;
+	}
 </style>
